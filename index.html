@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferreira Ferraz — Construção e Incorporação em Salvador desde 1994</title>
+<meta name="description" content="Ferreira Ferraz: construção e incorporação de empreendimentos residenciais e empresariais de alto padrão nas áreas mais nobres de Salvador, desde 1994. Rise, Ocean View, Ocean House e Ferreira Ferraz Médico e Empresarial.">
+<meta property="og:title" content="Ferreira Ferraz — Construindo e realizando sonhos">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/logo-cor.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --bg2:#efeae2; --ink:#1f1e1c; --ink2:#55524d; --muted:#8a857d;
+  --line:rgba(31,30,28,.14); --accent:#1d5a9e; --accent2:#8fc4ea; --dark:#1b1a18;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --pad:clamp(1.25rem,5vw,6rem); --max:1320px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-variant-numeric:lining-nums;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500;display:flex;align-items:center;gap:1rem}
+.eyebrow::before{content:"";width:2.5rem;height:1px;background:var(--accent)}
+h1,h2,h3,.info div p,.num b,.step .n,.feat .n,figcaption{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2.2rem,4.6vw,3.9rem);margin:1.2rem 0 1.5rem}
+h2 em,h1 em{font-style:italic;color:var(--accent)}
+p.lead{font-size:1.06rem;color:var(--ink2);max-width:36rem;font-weight:300}
+section{padding:clamp(5rem,11vw,9.5rem) 0}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}.reveal.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .5s,border-color .5s,padding .5s;border-bottom:1px solid transparent;padding:1.6rem 0;color:#fff}
+header.solid{background:rgba(246,243,238,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line);padding:1rem 0;color:var(--ink)}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--sans);font-weight:500;letter-spacing:.42em;font-size:.86rem;display:flex;align-items:center;gap:.8rem}
+.logo i{display:inline-block;width:18px;height:18px;border:1px solid currentColor;position:relative}
+.logo i::after{content:"";position:absolute;left:4px;top:4px;width:8px;height:8px;background:var(--accent)}
+nav ul{display:flex;gap:2.4rem;list-style:none}
+nav a{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;position:relative;padding:.3rem 0;opacity:.9}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s}
+nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{border:1px solid currentColor;padding:.6rem 1.2rem!important}
+.nav-cta::after{display:none}
+.burger{display:none;background:none;border:0;color:inherit;width:34px;height:22px;position:relative;cursor:pointer}
+.burger span{position:absolute;left:0;width:100%;height:1px;background:currentColor;transition:.4s}
+.burger span:nth-child(1){top:5px}.burger span:nth-child(2){top:15px}
+body.menu-open .burger span:nth-child(1){top:10px;transform:rotate(45deg)}
+body.menu-open .burger span:nth-child(2){top:10px;transform:rotate(-45deg)}
+
+/* hero */
+.hero{position:relative;height:100vh;min-height:640px;padding:0;color:#fff;overflow:hidden;background:linear-gradient(135deg,#3a342c,#1b1a18)}
+.hero-img{position:absolute;inset:0;background:url(img/hero.jpg) center/cover no-repeat;transform:scale(1.08);animation:heroZoom 9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,0) 60%),linear-gradient(180deg,rgba(20,18,15,.45) 0%,rgba(20,18,15,.1) 40%,rgba(20,18,15,.75) 100%)}
+.hero .wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(3rem,8vh,6rem)}
+.hero .eyebrow{color:var(--accent2)}.hero .eyebrow::before{background:var(--accent2)}
+.hero h1{font-size:clamp(3rem,8.4vw,7.6rem);margin:1.4rem 0 2rem;max-width:12ch}
+.hero h1 em{color:var(--accent2)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;border-top:1px solid rgba(255,255,255,.25);padding-top:1.6rem}
+.hero-foot p{max-width:28rem;font-weight:300;opacity:.85;font-size:.98rem}
+.scroll{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;display:flex;align-items:center;gap:1rem;white-space:nowrap}
+.scroll span{width:1px;height:46px;background:rgba(255,255,255,.35);position:relative;overflow:hidden}
+.scroll span::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:drip 2.2s infinite}
+@keyframes drip{to{top:100%}}
+
+/* manifesto */
+.manifesto .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(3rem,7vw,7rem);align-items:center}
+.manifesto figure{position:relative;aspect-ratio:4/5;overflow:hidden}
+.manifesto figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s}
+.manifesto figure:hover img{transform:scale(1.04)}
+.manifesto figcaption{position:absolute;left:-1px;bottom:-1px;background:var(--bg);padding:1.2rem 1.6rem 0 0;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink2)}
+.quote-big{font-family:var(--serif);font-size:clamp(1.5rem,2.3vw,2rem);line-height:1.35;font-weight:300;margin:2rem 0;padding-left:1.6rem;border-left:1px solid var(--accent)}
+.sign{margin-top:2.4rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* projects */
+.projects{background:var(--bg2)}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:4rem;flex-wrap:wrap}
+.head-row h2{margin-bottom:0}
+.link-line{font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:.35rem;display:inline-flex;gap:.8rem;transition:gap .4s,color .4s,border-color .4s}
+.link-line:hover{gap:1.4rem;color:var(--accent);border-color:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,2.4vw,2.4rem)}
+.card{cursor:pointer}
+.card .ph{position:relative;aspect-ratio:3/4;overflow:hidden;background:#d9d1c4}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1),filter 1s}
+.card:hover .ph img{transform:scale(1.06);filter:brightness(.85)}
+.badge{position:absolute;top:1.1rem;left:1.1rem;background:rgba(246,243,238,.95);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;padding:.45rem .8rem;font-weight:500}
+.badge.l{color:var(--accent)}
+.card .meta{padding-top:1.5rem;display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:1.4rem}
+.card h3{font-size:2rem;margin-bottom:.25rem}
+.card small{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.card .tip{white-space:nowrap;font-size:.86rem;color:var(--ink2);text-align:right;font-weight:300}
+.card .arrow{display:inline-block;transition:transform .5s}
+.card:hover .arrow{transform:translateX(6px)}
+.note{margin-top:2.5rem;font-size:.75rem;color:var(--muted)}
+
+/* diferenciais */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:4rem}
+.feat{padding:3rem 2rem 2.5rem 0;border-right:1px solid var(--line);transition:background .6s}
+.feat+.feat{padding-left:2rem}
+.feat:last-child{border-right:0}
+.feat svg{width:42px;height:42px;stroke:var(--accent);fill:none;stroke-width:1;margin-bottom:2rem;transition:transform .6s}
+.feat:hover svg{transform:translateY(-4px)}
+.feat .n{font-family:var(--serif);font-size:.95rem;color:var(--muted);font-style:italic}
+.feat h3{font-size:1.65rem;margin:.4rem 0 .9rem}
+.feat p{font-size:.92rem;color:var(--ink2);font-weight:300}
+
+/* numbers */
+.numbers{background:var(--dark);color:#efe9df}
+.numbers .eyebrow{color:var(--accent2)}.numbers .eyebrow::before{background:var(--accent2)}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:4rem}
+.num{padding:0 2rem;border-left:1px solid rgba(255,255,255,.14)}
+.num:first-child{padding-left:0;border-left:0}
+.num b{font-family:var(--serif);font-weight:300;font-size:clamp(3.2rem,6vw,5.4rem);line-height:1;display:block;color:#fff}
+.num b sup{font-size:.4em;color:var(--accent2);vertical-align:top;margin-left:.15em}
+.num span{display:block;margin-top:1rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(239,233,223,.6)}
+.numbers .note{color:rgba(239,233,223,.4)}
+
+/* process */
+.timeline{margin-top:4.5rem;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.timeline::before{content:"";position:absolute;top:7px;left:0;right:0;height:1px;background:var(--line)}
+.timeline .bar{position:absolute;top:7px;left:0;height:1px;background:var(--accent);width:0;transition:width 2.4s cubic-bezier(.2,.7,.2,1)}
+.timeline.in .bar{width:100%}
+.preview .reveal,.preview .bar{transition:none!important}
+.step{position:relative;padding-right:1.6rem}
+.step .dot{width:15px;height:15px;border-radius:50%;background:var(--bg);border:1px solid var(--accent);position:relative;z-index:1;margin-bottom:2rem}
+.step .dot::after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--accent)}
+.step .n{font-family:var(--serif);font-style:italic;color:var(--muted)}
+.step h3{font-size:1.5rem;margin:.3rem 0 .7rem}
+.step p{font-size:.9rem;color:var(--ink2);font-weight:300}
+
+/* testimonial */
+.testi{background:var(--bg2);text-align:center}
+.testi blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,3.4vw,2.9rem);line-height:1.3;max-width:58rem;margin:2.2rem auto 2.6rem}
+.testi .mark{font-family:var(--serif);font-size:5rem;line-height:.5;color:var(--accent);display:block;height:2rem}
+.testi cite{font-style:normal;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.testi cite b{color:var(--ink);font-weight:500;display:block;margin-bottom:.3rem}
+.testi .eyebrow{justify-content:center}
+
+/* contact */
+.contact .grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(3rem,7vw,7rem)}
+.info{margin-top:2.6rem;display:grid;gap:1.6rem}
+.info div small{display:block;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:.2rem}
+.info div p{font-family:var(--serif);font-size:1.45rem;font-weight:300}
+.wa{display:inline-flex;align-items:center;gap:.8rem;margin-top:2.6rem;border:1px solid var(--ink);padding:.95rem 1.6rem;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;transition:background .4s,color .4s}
+.wa:hover{background:var(--ink);color:var(--bg)}
+.wa svg{width:18px;height:18px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:2.2rem 2rem;align-content:start;padding-top:.6rem}
+.field{position:relative}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);padding:.7rem 0;font:inherit;font-weight:300;color:var(--ink);outline:none;border-radius:0;-webkit-appearance:none;appearance:none;transition:border-color .4s}
+.field select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%231d5a9e'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") right center no-repeat;cursor:pointer}
+.field textarea{resize:none;height:3.2rem}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}
+.btn{grid-column:1/-1;justify-self:start;background:var(--ink);color:var(--bg);border:0;padding:1.15rem 2.6rem;font:inherit;font-size:.76rem;letter-spacing:.24em;text-transform:uppercase;cursor:pointer;transition:background .4s,letter-spacing .4s}
+.btn:hover{background:var(--accent);letter-spacing:.3em}
+.consent{grid-column:1/-1;font-size:.75rem;color:var(--muted);margin-top:-1rem}
+.ok{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--accent);display:none}
+
+/* footer */
+footer{background:var(--dark);color:rgba(239,233,223,.7);padding:5.5rem 0 2.2rem;font-size:.88rem}
+.f-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem;padding-bottom:4rem;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .logo{color:#fff;margin-bottom:1.4rem}
+footer h4{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent2);font-weight:500;margin-bottom:1.2rem}
+footer ul{list-style:none;display:grid;gap:.55rem}
+footer a{transition:color .3s}footer a:hover{color:#fff}
+.f-bot{display:flex;justify-content:space-between;gap:1.5rem;padding-top:2rem;font-size:.74rem;letter-spacing:.06em;flex-wrap:wrap;color:rgba(239,233,223,.45)}
+.fab{position:fixed;right:1.5rem;bottom:1.5rem;z-index:40;width:54px;height:54px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .4s,background .4s}
+.fab:hover{transform:translateY(-3px);background:var(--accent)}
+.fab svg{width:22px;height:22px}
+
+/* responsive */
+@media (max-width:1080px){
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .feat:nth-child(2){border-right:0}
+  .feat:nth-child(3){padding-left:0}
+  .feat:nth-child(n+3){border-top:1px solid var(--line)}
+  .timeline{grid-template-columns:1fr;gap:2.4rem;padding-left:2.4rem}
+  .timeline::before,.timeline .bar{top:0;bottom:0;left:7px;width:1px;height:auto}
+  .timeline .bar{height:0;transition:height 2.4s}
+  .timeline.in .bar{width:1px;height:100%}
+  .step .dot{position:absolute;left:-2.4rem;top:.45rem;margin:0}
+  .f-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  nav{position:fixed;inset:0;background:var(--bg);color:var(--ink);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .5s}
+  body.menu-open nav{opacity:1;pointer-events:auto}
+  body.menu-open header{color:var(--ink)}
+  nav ul{flex-direction:column;align-items:center;gap:2rem}
+  nav a{font-size:1rem}
+  .burger{display:block;z-index:60}
+  .manifesto .grid,.contact .grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr;gap:3.5rem}
+  .card .ph{aspect-ratio:4/5}
+  .num-grid{grid-template-columns:1fr 1fr;gap:3rem 0}
+  .num:nth-child(3){padding-left:0;border-left:0}
+  .hero-foot{flex-direction:column;align-items:flex-start}
+  .scroll{display:none}
+}
+@media (max-width:560px){
+  .feat-grid{grid-template-columns:1fr}
+  .feat,.feat+.feat{padding:2.4rem 0;border-right:0;border-top:1px solid var(--line)}
+  .feat:first-child{border-top:0}
+  form{grid-template-columns:1fr}
+  .f-top{grid-template-columns:1fr}
+  .logo{letter-spacing:.32em;font-size:.8rem}
+  .num{padding:0 1.2rem}
+  .num:nth-child(odd){padding-left:0}
+  .eyebrow{letter-spacing:.22em;font-size:.66rem;gap:.7rem}
+  .eyebrow::before{width:1.6rem;flex:none}
+  .hero h1{font-size:3.3rem}
+}
+
+.logo img{height:46px;width:auto}
+.hero .eyebrow,.hero h1,.hero-foot p{text-shadow:0 1px 22px rgba(0,0,0,.45)}
+.hero .eyebrow{color:#cfe6f7}
+.logo .lc{display:none}
+header.solid .logo .lw,body.menu-open .logo .lw{display:none}
+header.solid .logo .lc,body.menu-open .logo .lc{display:block}
+header.solid{padding:.7rem 0}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.btn-ghost{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(255,255,255,.7);padding:.9rem 1.5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;transition:background .4s,color .4s}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-ghost.solid{background:#fff;color:var(--ink);border-color:#fff}
+.btn-ghost.solid:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.cards.four{grid-template-columns:repeat(4,1fr)}
+.card .meta h3{font-size:1.7rem}
+.card p.desc{font-size:.88rem;color:var(--ink2);font-weight:300;padding-top:1rem}
+.card .more{margin-top:1rem;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);display:inline-flex;gap:.6rem;align-items:center}
+.badge.ok2{color:#2d6a4f}
+.card button{all:unset;cursor:pointer;display:block;width:100%}
+.card button:focus-visible{outline:1px solid var(--accent);outline-offset:6px}
+/* portfolio */
+.portfolio .cards{grid-template-columns:repeat(4,1fr)}
+.portfolio .card{cursor:default}
+.portfolio .card .ph{aspect-ratio:4/5}
+.portfolio .card .ph img{filter:grayscale(.35)}
+.portfolio .card:hover .ph img{filter:grayscale(0)}
+.portfolio .card h3{font-size:1.55rem}
+/* corretor */
+.broker{background:var(--bg2)}
+.broker .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,7vw,7rem);align-items:start}
+.broker ul.check{list-style:none;display:grid;gap:1.1rem;margin-top:.6rem}
+.broker ul.check li{padding-left:2rem;position:relative;font-weight:300;color:var(--ink2)}
+.broker ul.check li::before{content:"";position:absolute;left:0;top:.75em;width:1.1rem;height:1px;background:var(--accent)}
+.broker .cta-row{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.4rem}
+.btn-dark{display:inline-flex;align-items:center;gap:.7rem;background:var(--ink);color:var(--bg);padding:1rem 1.8rem;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;transition:background .4s}
+.btn-dark:hover{background:var(--accent)}
+.btn-line{display:inline-flex;align-items:center;gap:.7rem;border:1px solid var(--ink);padding:1rem 1.8rem;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;transition:background .4s,color .4s}
+.btn-line:hover{background:var(--ink);color:var(--bg)}
+.small{font-size:.78rem;color:var(--muted);margin-top:1.4rem}
+/* trajetoria */
+.numbers .num-grid{grid-template-columns:repeat(3,1fr)}
+.numbers blockquote{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.3;max-width:56rem;margin:4.5rem 0 0;padding-left:1.8rem;border-left:1px solid var(--accent2);color:#f3eee6}
+.numbers cite{display:block;margin-top:1.4rem;font-style:normal;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(239,233,223,.5)}
+/* contato */
+.info div p a{border-bottom:1px solid transparent;transition:border-color .3s}
+.info div p a:hover{border-color:var(--accent)}
+.info div p span{display:block;font-family:var(--sans);font-size:.85rem;color:var(--muted);margin-top:.15rem}
+.contact .actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.6rem}
+.contact .actions .wa{margin-top:0}
+/* dialog */
+dialog{border:0;padding:0;max-width:min(1080px,94vw);width:100%;max-height:92vh;background:var(--bg);color:var(--ink);margin:auto;box-shadow:0 40px 120px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(20,18,15,.72);backdrop-filter:blur(4px)}
+dialog[open]{animation:dIn .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes dIn{from{opacity:0;transform:translateY(24px)}}
+.dlg{display:grid;grid-template-columns:1.05fr 1fr;grid-template-rows:100%;height:min(780px,92vh)}
+.dlg .gal{background:#1b1a18;display:flex;flex-direction:column;min-height:0}
+.dlg .gal .main{flex:1;min-height:280px;background:center 35%/cover no-repeat;transition:background-image .4s}
+.dlg .gal .thumbs{display:flex;gap:6px;padding:6px;background:#1b1a18;overflow-x:auto}
+.dlg .gal .thumbs button{all:unset;cursor:pointer;width:72px;height:52px;flex:none;background:center/cover;opacity:.55;transition:opacity .3s;outline-offset:-2px}
+.dlg .gal .thumbs button.on,.dlg .gal .thumbs button:hover{opacity:1}
+.dlg .gal .thumbs button.on{outline:1px solid var(--accent2)}
+.dlg .body{padding:clamp(1.6rem,3.5vw,3rem);overflow-y:auto;min-height:0}
+.dlg .x:focus{outline:none}.dlg .x:focus-visible{outline:1px solid var(--accent)}
+.dlg h3{font-size:clamp(2.2rem,3.6vw,3rem);margin:.8rem 0 .4rem}
+.dlg .addr{font-size:.82rem;color:var(--muted);letter-spacing:.04em}
+.dlg .lead2{font-weight:300;color:var(--ink2);margin:1.2rem 0 1.6rem}
+.dlg dl{display:grid;gap:1.1rem;border-top:1px solid var(--line);padding-top:1.4rem}
+.dlg dt{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+.dlg dd{font-size:.9rem;font-weight:300;color:var(--ink2)}
+.dlg .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
+.dlg .links a{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--ink);padding:.75rem 1.1rem;transition:background .3s,color .3s}
+.dlg .links a:hover{background:var(--ink);color:var(--bg)}
+.dlg .links a.pri{background:var(--ink);color:var(--bg)}
+.dlg .links a.pri:hover{background:var(--accent);border-color:var(--accent)}
+.dlg .x{position:absolute;top:.9rem;right:.9rem;width:42px;height:42px;border-radius:50%;border:0;background:rgba(246,243,238,.95);cursor:pointer;font-size:1.3rem;line-height:1;color:var(--ink);z-index:2}
+.dlg .note{margin-top:1.6rem}
+@media (max-width:1080px){.cards.four,.portfolio .cards{grid-template-columns:1fr 1fr}}
+@media (max-width:860px){
+ .broker .grid{grid-template-columns:1fr}
+ .numbers .num-grid{grid-template-columns:1fr;gap:2.4rem}
+ .numbers .num{padding:0;border-left:0}
+ .dlg{grid-template-columns:1fr;grid-template-rows:auto;height:auto}
+ dialog{max-height:94vh;overflow-y:auto}
+ .dlg .gal .main{min-height:240px;aspect-ratio:3/2;flex:none}
+ .dlg .body{overflow:visible}
+ .logo img{height:40px}
+}
+@media (max-width:560px){
+ .cards.four,.portfolio .cards{grid-template-columns:1fr}
+ .portfolio .cards{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+ .portfolio .card h3{font-size:1.25rem}
+ .portfolio .card .meta{flex-direction:column;gap:.3rem}
+ .portfolio .card .tip{text-align:left;white-space:normal}
+ .hero h1{font-size:3rem}
+ .hm{display:none}
+ .hero::after{background:linear-gradient(180deg,rgba(20,18,15,.55) 0%,rgba(20,18,15,.35) 45%,rgba(20,18,15,.8) 100%)}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Ferreira Ferraz — início"><img class="lw" src="img/logo-branco.png" alt="Ferreira Ferraz"><img class="lc" src="img/logo-cor.png" alt="Ferreira Ferraz"></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#empreendimentos">Empreendimentos</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#corretor">Corretor parceiro</a></li>
+        <li><a href="#contato" class="nav-cta">Fale conosco</a></li>
+      </ul>
+    </nav>
+    <button class="burger" aria-label="Abrir menu" id="burger"><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-img" role="img" aria-label="Piscina do Ocean House, em Jaguaribe"></div>
+  <div class="wrap">
+    <div class="eyebrow reveal"><span class="hm">Construção &amp; Incorporação&nbsp;·&nbsp;</span>Salvador&nbsp;·&nbsp;Desde 1994</div>
+    <h1 class="reveal d1">Construindo e realizando <em>sonhos.</em></h1>
+    <div class="hero-ctas reveal d2">
+      <a href="#empreendimentos" class="btn-ghost solid">Conheça os empreendimentos <span>→</span></a>
+      <a href="#corretor" class="btn-ghost">Área do corretor</a>
+    </div>
+    <div class="hero-foot reveal d2">
+      <p>Empreendimentos residenciais e empresariais nas áreas mais nobres de Salvador, com alto padrão de qualidade e acabamento.</p>
+      <div class="scroll"><span></span>Role para descobrir</div>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto" id="empresa">
+  <div class="wrap grid">
+    <figure class="reveal">
+      <img src="img/sobre.jpg" alt="Fachada do Mon Jardin, no Caminho das Árvores">
+      <figcaption>Mon Jardin · Caminho das Árvores</figcaption>
+    </figure>
+    <div>
+      <div class="eyebrow reveal">A Empresa</div>
+      <h2 class="reveal d1">Desde 1994,<br><em>nas áreas mais nobres</em> de Salvador</h2>
+      <p class="lead reveal d2">A Ferreira Ferraz atua no ramo de construção e incorporação de empreendimentos imobiliários. Iniciou suas atividades em 1994 como construtora-empreiteira e, depois, passou a se dedicar exclusivamente à construção e incorporação imobiliária, nas áreas residencial e empresarial.</p>
+      <p class="quote-big reveal d2">“Possibilitar aos clientes a satisfação de possuir um imóvel belo, moderno e bem localizado, com alto padrão de qualidade e acabamento, preço justo e o melhor atendimento antes e após a venda.”</p>
+      <p class="lead reveal d3">Buscando aliar beleza, harmonia arquitetônica e praticidade, a empresa se destaca pela atualidade de seus projetos e pela boa relação custo-benefício, com projetos elaborados por profissionais experientes, consagrados no mercado imobiliário local e nacional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="empreendimentos">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow reveal">Empreendimentos</div>
+        <h2 class="reveal d1">Lançamentos e <em>prontos para morar</em></h2>
+      </div>
+      <a href="#contato" class="link-line reveal d2">Agende uma visita <span>→</span></a>
+    </div>
+    <div class="cards four" id="cards"></div>
+    <p class="note">Imagens meramente ilustrativas. Consulte unidades disponíveis e condições com a equipe de vendas.</p>
+  </div>
+</section>
+
+<section class="features" id="diferenciais">
+  <div class="wrap">
+    <div class="eyebrow reveal">Diferenciais</div>
+    <h2 class="reveal d1">Beleza, harmonia<br>e <em>praticidade</em></h2>
+    <div class="feat-grid">
+      <div class="feat reveal">
+        <svg viewBox="0 0 48 48"><path d="M24 44s14-13.2 14-24a14 14 0 1 0-28 0c0 10.8 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg>
+        <span class="n">01</span><h3>Localizações nobres</h3>
+        <p>Investimentos concentrados nas áreas mais nobres da cidade: Caminho das Árvores, Jaguaribe, Pituba, Stella Maris e Alphaville.</p>
+      </div>
+      <div class="feat reveal d1">
+        <svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32"/><path d="M8 20h32M20 20v20"/><circle cx="14" cy="14" r="1.5"/></svg>
+        <span class="n">02</span><h3>Alto padrão</h3>
+        <p>Projetos modernos e funcionais, com alto padrão de qualidade e acabamento e áreas comuns equipadas e decoradas.</p>
+      </div>
+      <div class="feat reveal d2">
+        <svg viewBox="0 0 48 48"><path d="M10 38C10 20 22 10 40 8c-2 18-12 30-30 30z"/><path d="M10 38l16-16"/></svg>
+        <span class="n">03</span><h3>Sustentabilidade</h3>
+        <p>Certificado IPTU Verde, vagas para carro elétrico e, em empreendimentos recentes, telhado verde e energia solar nas áreas comuns.</p>
+      </div>
+      <div class="feat reveal d3">
+        <svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg>
+        <span class="n">04</span><h3>Antes e após a entrega</h3>
+        <p>Atendimento dedicado e priorizado aos clientes antes e após a entrega dos imóveis, para atender cada vez mais às suas necessidades.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="wrap">
+    <div class="eyebrow reveal">Trajetória</div>
+    <div class="num-grid">
+      <div class="num reveal"><b>1994</b><span>Início das atividades</span></div>
+      <div class="num reveal d1"><b><span data-count="30" style="all:unset">30</span><sup>+</sup></b><span>Anos no mercado imobiliário</span></div>
+      <div class="num reveal d2"><b><span data-count="100" style="all:unset">100</span><sup>%</sup></b><span>Vendido nas obras do portfólio</span></div>
+    </div>
+    <blockquote class="reveal d1">A solidez da Ferreira Ferraz é fruto do reconhecimento conquistado ao longo de décadas de compromissos honrados junto aos seus clientes, colaboradores e fornecedores.<cite>30 anos da Ferreira Ferraz · 2024</cite></blockquote>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow reveal">Portfólio</div>
+        <h2 class="reveal d1">Obras <em>entregues</em></h2>
+      </div>
+      <p class="lead reveal d2" style="max-width:26rem">Alguns empreendimentos realizados pela Ferreira Ferraz.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ph"><img src="img/mon-jardin.jpg" alt="Mon Jardin"><span class="badge">100% vendido</span></div>
+        <div class="meta"><div><h3>Mon Jardin</h3><small>Caminho das Árvores</small></div><div class="tip">4/4 · 3 suítes<br>140 m²</div></div>
+        <p class="desc">Torre única com 2 apartamentos por andar, 4 vagas de garagem, hall social privativo e varanda gourmet integrada à cozinha.</p>
+      </article>
+      <article class="card reveal d1">
+        <div class="ph"><img src="img/villa-ferrara.jpg" alt="Villa Ferrara"><span class="badge">100% vendido</span></div>
+        <div class="meta"><div><h3>Villa Ferrara</h3><small>Stella Maris</small></div><div class="tip">Casas<br>4 suítes</div></div>
+        <p class="desc">Condomínio clube com casas duplex de 4 suítes, varanda gourmet, 2 vagas privativas e clube equipado e decorado.</p>
+      </article>
+      <article class="card reveal d2">
+        <div class="ph"><img src="img/jardin-de-giverny.jpg" alt="Jardin de Giverny"><span class="badge">100% vendido</span></div>
+        <div class="meta"><div><h3>Jardin de Giverny</h3><small>Pituba</small></div><div class="tip">3/4 · suíte<br>104,20 m²</div></div>
+        <p class="desc">Apartamentos com ampla varanda gourmet, living em 2 ambientes e áreas comuns entregues equipadas e decoradas.</p>
+      </article>
+      <article class="card reveal d3">
+        <div class="ph"><img src="img/alpha-class.jpg" alt="Alpha Class Residence Alphaville"><span class="badge">100% vendido</span></div>
+        <div class="meta"><div><h3>Alpha Class</h3><small>Alphaville</small></div><div class="tip">1/4, loft e 2/4<br>62 a 94 m²</div></div>
+        <p class="desc">Prédio de 9 andares, nascente, fachadas 100% em pastilhas e apartamentos com ampla varanda gourmet.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="broker" id="corretor">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow reveal">Área do corretor</div>
+      <h2 class="reveal d1">Traga seu cliente e <em>feche direto conosco</em></h2>
+      <p class="lead reveal d2">Cadastre-se para receber material de apoio, orientações e treinamento dos nossos produtos e descubra como vender mais com a força de uma das incorporadoras mais sólidas do Estado.</p>
+    </div>
+    <div class="reveal d2">
+      <ul class="check">
+        <li>Comissionamento privilegiado, exclusivo e sem intermediários.</li>
+        <li>Produtos na planta e prontos para morar, com alto padrão e localizações estratégicas.</li>
+        <li>Facilidade, transparência e parceria de verdade.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn-dark" href="https://docs.google.com/forms/d/e/1FAIpQLSer-oClZAXrIzRikueyTQLgfiVdbRUWun6wbjwnzH2e-ML-ow/viewform?usp=header" target="_blank" rel="noopener">Cadastre-se agora <span>→</span></a>
+        <a class="btn-line" href="tel:+557139011293">(71) 3901-1293</a>
+      </div>
+      <p class="small">Central de Vendas e Apoio ao Parceiro: Av. Tancredo Neves, 1033, loja 03, Ed. Ferreira Ferraz Médico e Empresarial, Caminho das Árvores, Salvador/BA. Consulte condições e regulamento.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow reveal">Fale conosco</div>
+      <h2 class="reveal d1">Fale com a nossa <em>equipe de atendimento</em></h2>
+      <p class="lead reveal d2">Envie suas dúvidas, críticas, sugestões ou proposta de venda de terreno.</p>
+      <div class="info reveal d2">
+        <div><small>Telefone</small><p><a href="tel:+557131131043">(71) 3113-1043</a></p></div>
+        <div><small>E-mail</small><p><a href="mailto:ferreiraferraz@ferreiraferraz.com.br">ferreiraferraz@ferreiraferraz.com.br</a></p></div>
+        <div><small>Escritório</small><p>Av. Tancredo Neves, 1033, sala 1706<span>Ed. Ferreira Ferraz Médico e Empresarial · Caminho das Árvores · Salvador/BA · CEP 41820-021</span></p></div>
+      </div>
+      <div class="actions reveal d3">
+        <a href="https://wa.me/557141048133" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp de vendas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg>
+          WhatsApp · (71) 4104-8133
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Tancredo+Neves,+1033+-+Caminho+das+%C3%81rvores,+Salvador+-+BA,+41820-021" target="_blank" rel="noopener" class="wa">Ver no mapa</a>
+      </div>
+    </div>
+    <form class="reveal d1" id="form" novalidate>
+      <div class="field full"><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="name"></div>
+      <div class="field"><label for="email">E-mail</label><input id="email" type="email" name="email" required autocomplete="email"></div>
+      <div class="field"><label for="tel">Telefone</label><input id="tel" type="tel" name="tel" autocomplete="tel" placeholder="(71) 00000-0000"></div>
+      <div class="field full"><label for="int">Assunto</label>
+        <select id="int" name="interesse">
+          <option>Interesse no Rise</option><option>Interesse no Ocean View</option><option>Interesse no Ocean House</option><option>Ferreira Ferraz Médico e Empresarial (venda/locação)</option><option>Dúvida</option><option>Sugestão</option><option>Venda de terreno</option><option>Corretor parceiro</option>
+        </select>
+      </div>
+      <div class="field full"><label for="msg">Mensagem</label><textarea id="msg" name="msg"></textarea></div>
+      <button class="btn" type="submit">Enviar mensagem</button>
+      <p class="consent">Ao enviar, seu aplicativo de e-mail será aberto com a mensagem pronta para ferreiraferraz@ferreiraferraz.com.br.</p>
+      <p class="ok" id="ok">Obrigado! Conclua o envio no seu aplicativo de e-mail.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div>
+        <div class="logo"><img src="img/logo-branco.png" alt="Ferreira Ferraz"></div>
+        <p style="max-width:22rem;font-weight:300">Construção e incorporação de empreendimentos residenciais e empresariais em Salvador, desde 1994.</p>
+      </div>
+      <div><h4>Navegação</h4><ul><li><a href="#empresa">Empresa</a></li><li><a href="#empreendimentos">Empreendimentos</a></li><li><a href="#portfolio">Portfólio</a></li><li><a href="#corretor">Corretor parceiro</a></li><li><a href="#contato">Fale conosco</a></li></ul></div>
+      <div><h4>Escritório</h4><ul><li>Av. Tancredo Neves, 1033</li><li>Ed. Ferreira Ferraz Médico e Empresarial, sala 1706</li><li>Caminho das Árvores, Salvador/BA</li><li>CEP 41820-021</li><li><a href="tel:+557131131043">(71) 3113-1043</a></li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="https://www.instagram.com/ferreiraferrazoficial/" target="_blank" rel="noopener">Instagram · @ferreiraferrazoficial</a></li><li><a href="https://www.facebook.com/ferreiraferrazoficial" target="_blank" rel="noopener">Facebook</a></li><li><a href="mailto:ferreiraferraz@ferreiraferraz.com.br">E-mail</a></li></ul></div>
+    </div>
+    <div class="f-bot">
+      <span>© <span id="y">2026</span> Ferreira Ferraz. Todos os direitos reservados.</span>
+      <span>Imagens meramente ilustrativas</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/557141048133" target="_blank" rel="noopener" class="fab" aria-label="WhatsApp de vendas"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2z"/></svg></a>
+
+<dialog id="dlg" aria-labelledby="dlg-t"></dialog>
+
+<script>
+(function(){
+  var FF='https://www.ferreiraferraz.com.br/';
+  var P=[
+   {id:'rise',name:'Rise',bairro:'Caminho das Árvores',badge:'Lançamento',bcls:'l',tip:'2/4 (suíte)<br>65 a 69 m²',img:'img/rise.jpg',
+    addr:'Alameda das Framboesas, 286, Caminho das Árvores, Salvador/BA',
+    desc:'Seu 2/4 (suíte), com varanda gourmet e 2 vagas de garagem no coração do Caminho das Árvores.',
+    lead:'Torre única com 26 andares, 4 apartamentos por andar, 2 elevadores, fachadas 100% revestidas, esquadrias em alumínio bronze e vidro, água e gás individualizados* e IPTU Verde. Decorado disponível para visitação.',
+    specs:[['Apartamento','Living amplo em 2 ambientes, varanda gourmet, 2 quartos (sendo um suíte), sanitário social, cozinha, área de serviço e 2 vagas de garagem. Piso em todos os ambientes.'],
+      ['Plantas','Tipo A: 68,90 m² (colunas 01 e 04, do 1º ao 26º pav.) · Tipo B: 65,23 m² (colunas 02 e 03, do 1º ao 24º pav.) · Tipo B1: 69,07 m² (colunas 02 e 03, 25º e 26º pav.)'],
+      ['Áreas comuns','Guarita, espaço delivery, academia, piscina com borda infinita, hidro e deck molhado, piscina infantil, brinquedoteca, salão de festas com bar e lavabo, churrasqueira, parque infantil, playground, pet place, sala de estar, bicicletários, vagas PcD e para carro elétrico.'],
+      ['Condições','Pagamento direto em até 30 meses. Stand no local.']],
+    gal:['img/rise.jpg','img/rise-lobby.jpg','img/rise-living.jpg','img/rise-piscina.jpg','img/rise-varanda.jpg'],
+    links:[['tel:+557131901540','Stand · (71) 3190-1540',1],['https://ferreira-ferraz.rds.land/rise-caminho-das-arvores','Hotsite'],[FF+'midia/enterprises/2025-05-28-ficha-tecnica-rise-framboesas-r8-6837536f94d.pdf','Ficha técnica (PDF)'],['https://www.youtube.com/watch?v=wKaGMc9mgBA','Vídeo']]},
+   {id:'ocean-view',name:'Ocean View',bairro:'Jaguaribe',badge:'Pronto para morar',bcls:'',tip:'3/4 (suíte)<br>104,58 m²',img:'img/ocean-view.jpg',
+    addr:'Rua Padre Silveira Sales, 06, Jaguaribe, Salvador/BA',
+    desc:'Obra pronta! O seu 3/4 (suíte) com vista mar permanente em Jaguaribe. Últimas unidades.',
+    lead:'Apartamentos de 3/4 (1 suíte) com vista mar permanente, varanda gourmet, 2 vagas de garagem e 2 opções de planta. Duas torres, 2 apartamentos por andar, nascente e com vista mar em todas as unidades, a 100 m da praia de Jaguaribe.',
+    specs:[['Apartamento','3/4 (1 suíte) ou 2/4 (suíte) com living integrado, 104,58 m², varanda gourmet e piso em todos os ambientes.'],
+      ['Áreas comuns','Guarita, hall de entrada, piscina com borda infinita, deck molhado e piscina infantil, espaço gourmet, espaço fitness, salão de jogos, salão de festas com bar, coworking, guarderia de pranchas, bicicletário, espaço pet e vagas para visitantes*.'],
+      ['Mais vantagens','Fachadas 100% em pastilha, esquadrias em alumínio bronze, dois elevadores por torre, água e gás individualizados (medidores não inclusos), Certificado IPTU Verde, telhado verde e vagas para carro elétrico. Áreas comuns equipadas e decoradas, mediante taxa de decoração. Regime de incorporação.'],
+      ['Visite','Stand no local · Visite o decorado.']],
+    gal:['img/ocean-view.jpg','img/ov-living.jpg','img/ov-varanda.jpg','img/ov-quarto.jpg'],
+    links:[['tel:+557141048133','Vendas · (71) 4104-8133',1],[FF+'midia/enterprises/2023-09-12-ficha-tecnica-ov-6500c2f19b1.pdf','Ficha técnica (PDF)'],['https://www.youtube.com/watch?v=CeyO38_04c8','Vídeo']]},
+   {id:'ocean-house',name:'Ocean House',bairro:'Jaguaribe',badge:'Pronto para morar',bcls:'',tip:'1/4<br>42,92 m²',img:'img/ocean-house.jpg',
+    addr:'Rua Padre Silveira Sales, nº 04, Jaguaribe, Salvador/BA',
+    desc:'Pronto para morar! 1/4 com 1 vaga privativa de garagem em Jaguaribe. Últimas unidades.',
+    lead:'Torre única com apartamentos de 1/4 e 1 vaga privativa de garagem, elevadores exclusivos por tipologia, IPTU Verde, vagas para carro elétrico e infraestrutura completa, no bairro mais charmoso da orla de Salvador. Perto do mar, perto de tudo.',
+    specs:[['Apartamento','1/4 com varanda, 1 vaga privativa de garagem e 42,92 m² de área privativa. Piso em todos os ambientes.'],
+      ['Áreas comuns','Guarita, hall de entrada, piscina com borda infinita, deck molhado e raia para natação, piscina infantil, espaço gourmet, espaço fitness, salão de jogos, salão de festas com bar, coworking, guarderia de pranchas, bicicletário e espaço pet.'],
+      ['Mais vantagens','Fachadas 100% em pastilha, esquadrias em alumínio bronze, vista mar, água e gás individualizados (medidores não inclusos), Certificado IPTU Verde, energia solar nas áreas comuns, telhado verde e vagas para carro elétrico. Áreas comuns equipadas e decoradas, mediante taxa de decoração. Regime de incorporação.'],
+      ['Visite','Stand de vendas no local.']],
+    gal:['img/ocean-house.jpg','img/oh-piscina.jpg','img/oh-gourmet.jpg'],
+    links:[['tel:+557141048133','Vendas · (71) 4104-8133',1],[FF+'midia/enterprises/2022-01-12-ficha-tecnica-61df7618f12.pdf','Ficha técnica (PDF)'],['https://www.youtube.com/watch?v=vLhX0eAcFsw','Vídeo']]},
+   {id:'ffme',name:'Ferreira Ferraz Médico e Empresarial',short:'FF Médico e Empresarial',bairro:'Av. Tancredo Neves',badge:'Venda e locação',bcls:'l',tip:'Salas, lojas<br>e consultórios',img:'img/ffme.jpg',
+    addr:'Av. Tancredo Neves, 1033, Caminho das Árvores, Salvador/BA · vizinho à Casa do Comércio',
+    desc:'Salas, consultórios, lojas e espaços multiuso na Av. Tancredo Neves. Pronto, disponível para venda e locação.',
+    lead:'Empreendimento médico e empresarial pronto, com salas, consultórios, lojas, espaços multiuso e boxes de serviços, vista e localização privilegiadas, stand e estacionamento para clientes no local.',
+    specs:[['Unidades','Salas e consultórios de 28,79 a 36,47 m² · lojas de 13,20 a 44,04 m² no térreo · áreas multiuso de 500 a 1.000 m² · opções de salas individuais ou conjugadas até o pavimento completo.'],
+      ['Infraestrutura','Elevadores com sistema AGILE, controle eletrônico de acesso, escada de segurança pressurizada, internet GPON de até 1 GB, pontos para recarga de carros elétricos, infraestrutura para ar-condicionado e piso porcelanato Eliane ou Portobello nas salas.'],
+      ['Eficiência','Vidros refletivos que reduzem a entrada de raios UV em até 67%, iluminação em LED ou Tuboled em quase todas as áreas comuns e ampla área técnica com 70% de abertura para troca de calor.'],
+      ['Conveniência','Mini shopping com lojas de produtos e serviços e praça de alimentação.']],
+    gal:['img/ffme.jpg','img/ffme-rua.jpg','img/ffme-lobby.jpg'],
+    links:[['tel:+557139011293','Stand · (71) 3901-1293',1],['http://www.ferreiraferrazempresarial.com.br','Hotsite'],[FF+'midia/enterprises/2021-08-12-ficha-tecnica-ffe-final-12-08-2021-6115111c7da.pdf','Ficha técnica (PDF)']]}
+  ];
+  var cards=document.getElementById('cards');
+  cards.innerHTML=P.map(function(p,i){return '<article class="card reveal'+(i?' d'+i:'')+'"><button data-id="'+p.id+'" aria-label="Ver detalhes: '+p.name+'">'+
+    '<div class="ph"><img src="'+p.img+'" alt="'+p.name+'"><span class="badge '+p.bcls+'">'+p.badge+'</span></div>'+
+    '<div class="meta"><div><h3>'+(p.short||p.name)+'</h3><small>'+p.bairro+'</small></div><div class="tip">'+p.tip+'</div></div>'+
+    '<p class="desc">'+p.desc+'</p><span class="more">Ver detalhes <span class="arrow">→</span></span></button></article>'}).join('');
+  var dlg=document.getElementById('dlg');
+  function open(id){
+    var p=P.filter(function(x){return x.id===id})[0];if(!p)return;
+    dlg.innerHTML='<div class="dlg"><button class="x" aria-label="Fechar">×</button><div class="gal"><div class="main" style="background-image:url('+p.gal[0]+')"></div><div class="thumbs">'+
+      p.gal.map(function(g,i){return '<button class="'+(i?'':'on')+'" style="background-image:url('+g+')" data-g="'+g+'" aria-label="Imagem '+(i+1)+'"></button>'}).join('')+
+      '</div></div><div class="body"><div class="eyebrow">'+p.badge+' · '+p.bairro+'</div><h3 id="dlg-t">'+p.name+'</h3><p class="addr">'+p.addr+'</p><p class="lead2">'+p.lead+'</p><dl>'+
+      p.specs.map(function(s){return '<div><dt>'+s[0]+'</dt><dd>'+s[1]+'</dd></div>'}).join('')+'</dl><div class="links">'+
+      p.links.map(function(l){return '<a href="'+l[0]+'"'+(l[2]?' class="pri"':' target="_blank" rel="noopener"')+'>'+l[1]+'</a>'}).join('')+
+      '<a href="https://wa.me/557141048133" target="_blank" rel="noopener">WhatsApp</a></div><p class="note">Imagens meramente ilustrativas. *Consulte unidades e condições.</p></div></div>';
+    dlg.querySelector('.x').onclick=function(){dlg.close()};
+    dlg.querySelectorAll('.thumbs button').forEach(function(b){b.onclick=function(){dlg.querySelector('.main').style.backgroundImage='url('+b.dataset.g+')';dlg.querySelectorAll('.thumbs button').forEach(function(o){o.classList.toggle('on',o===b)})}});
+    dlg.showModal();document.body.style.overflow='hidden';
+  }
+  dlg.addEventListener('close',function(){document.body.style.overflow=''});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()});
+  cards.addEventListener('click',function(e){var b=e.target.closest('button[data-id]');if(b)open(b.dataset.id)});
+  if(location.hash.indexOf('#emp-')===0)setTimeout(function(){open(location.hash.slice(5))},300);
+
+  var header=document.getElementById('top');
+  function onScroll(){header.classList.toggle('solid',window.scrollY>60)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  var burger=document.getElementById('burger');
+  burger.addEventListener('click',function(){document.body.classList.toggle('menu-open')});
+  document.querySelectorAll('#nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open')})});
+
+  function count(el){var t=+el.dataset.count,s=null,d=1800;function step(ts){if(!s)s=ts;var p=Math.min((ts-s)/d,1);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+  var els=document.querySelectorAll('.reveal');
+  var showAll=location.hash==='#preview'||!('IntersectionObserver' in window);
+  function reveal(el){el.classList.add('in');el.querySelectorAll('[data-count]').forEach(function(c){if(showAll)c.textContent=c.dataset.count;else count(c)})}
+  if(showAll){document.documentElement.classList.add('preview');els.forEach(reveal)}else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){reveal(e.target);io.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }
+
+  var form=document.getElementById('form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.nome.value.trim()||!/\S+@\S+\.\S+/.test(form.email.value)){form.querySelector(!form.nome.value.trim()?'#nome':'#email').focus();return}
+    var subj='[Site] '+form.interesse.value+' — '+form.nome.value.trim();
+    var body='Nome: '+form.nome.value.trim()+'\nE-mail: '+form.email.value.trim()+'\nTelefone: '+form.tel.value.trim()+'\nAssunto: '+form.interesse.value+'\n\n'+form.msg.value;
+    location.href='mailto:ferreiraferraz@ferreiraferraz.com.br?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+    document.getElementById('ok').style.display='block';
+  });
+  document.getElementById('y').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
